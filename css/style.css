@@ -1,0 +1,22 @@
+#practicesPanel .left-sidebar {
+  width: 20px;
+  height: 100%;
+  position: fixed;
+  left: 0px;
+  background: #ccc;
+}
+#practicesPanel .practices-wrapper {
+  padding: 0px 20px 20px 16px;
+}
+#practicesPanel .practices-container .practice_item {
+  height: 258px;
+  padding: 12px 0px 0px 12px;
+}
+#practicesPanel .practices-container .practice_item .inner {
+  border: 1px solid black;
+  height: 100%;
+  width: 100%;
+  border-color: #a1b8d1;
+  border-style: solid;
+  border-radius: 6px;
+}
