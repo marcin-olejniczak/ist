@@ -7,7 +7,7 @@
         background: #ccc;   
     }
     .practices-wrapper{
-        padding:0px 20px 20px 16px;
+        padding:0px 20px 20px 28px;
     }
     .practices-container{
         .practice_item{
@@ -20,6 +20,21 @@
                 border-color: rgb(161, 184, 209);
                 border-style: solid;
                 border-radius: 6px;
+                overflow:hidden;
+                position: relative;
+                .info{
+                    width: 100%;
+                    height:100%;
+                    position:absolute;
+                    z-index: 1;
+                }
+                .bg_chart{
+                    width: 105% !important;
+                    height: 105% !important;
+                    margin-left: -12px;
+                    position: absolute;
+                    z-index: 0
+                }
             }
         }
     }
