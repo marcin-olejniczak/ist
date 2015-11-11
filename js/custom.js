@@ -72,4 +72,24 @@
         var ctx = canvas.get(0).getContext("2d");
         var myNewChart = new Chart(ctx).Line(data, options);
     });
+    
+    var resize_practice_items = function(){
+        var div = $('.practice_item');
+        var width = div.width();
+        div.css('height', width * 0.62);
+        // replace fitText with media queries and vw units
+        div.find("h2").fitText(1.1);
+        div.find("h1").fitText(0.35);
+        div.find(".patients, .providers").fitText(0.25);
+        div.find(".scale li:not(:first-child), .scale li:not(:last-child)").fitText(0.35);
+        div.find(".scale li:first-child, .scale li:last-child").fitText(0.32);
+    };
+
+    var resize_timeout;
+    window.onresize = function(){
+      clearTimeout(resize_timeout);
+      resize_timeout = setTimeout(resize_practice_items, 50);
+    };
+
+    resize_practice_items();
 })();

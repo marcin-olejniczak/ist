@@ -3,7 +3,57 @@
   height: 100%;
   position: fixed;
   left: 0px;
-  background: #ccc;
+  background: #47525e;
+}
+#practicesPanel .left-sidebar:hover {
+  width: 80px;
+  z-index: 10;
+}
+#practicesPanel .left-sidebar:hover #left-sidebar_menu {
+  display: block;
+}
+#practicesPanel .left-sidebar #left-sidebar_menu {
+  display: none;
+  margin-top: 20px;
+  padding: 0px 15px;
+  width: 100%;
+  height: 50%;
+  list-style-type: none;
+}
+#practicesPanel .left-sidebar #left-sidebar_menu li {
+  display: block;
+  float: left;
+  width: 100%;
+  height: 70px;
+  cursor: pointer;
+}
+#practicesPanel .left-sidebar #left-sidebar_menu li:not(:last-child) {
+  border-bottom-color: #a1b8d1;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+#practicesPanel .left-sidebar #left-sidebar_menu li a {
+  display: block;
+  float: left;
+  width: 100%;
+  height: 100%;
+  background-size: 50px;
+}
+#practicesPanel .left-sidebar #left-sidebar_menu .queue {
+  background-image: url(../img/sidebar_icon.png);
+  background-position: 50px 0px;
+}
+#practicesPanel .left-sidebar #left-sidebar_menu .clock {
+  background-image: url(../img/sidebar_icon.png);
+  background-position: 50px 203px;
+}
+#practicesPanel .left-sidebar #left-sidebar_menu .map {
+  background-image: url(../img/sidebar_icon.png);
+  background-position: 50px 127px;
+}
+#practicesPanel .left-sidebar #left-sidebar_menu .menu {
+  background-image: url(../img/sidebar_icon.png);
+  background-position: 50px 65px;
 }
 #practicesPanel .practices-wrapper {
   padding: 0px 20px 20px 28px;
@@ -13,6 +63,8 @@
   padding: 12px 0px 0px 12px;
 }
 #practicesPanel .practices-container .practice_item .inner {
+  position: relative;
+  color: #6c757e;
   border: 1px solid black;
   height: 100%;
   width: 100%;
@@ -20,18 +72,85 @@
   border-style: solid;
   border-radius: 6px;
   overflow: hidden;
-  position: relative;
 }
 #practicesPanel .practices-container .practice_item .inner .info {
-  width: 100%;
-  height: 100%;
   position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   z-index: 1;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+#practicesPanel .practices-container .practice_item .inner .info h1 {
+  color: #47525e;
+  padding: 0 30% 0 4%;
+  margin: 0px auto;
+  letter-spacing: 3px;
+  text-align: right;
+}
+#practicesPanel .practices-container .practice_item .inner .info h2 {
+  padding: 2% 4%;
+  margin: 0px;
+  letter-spacing: 2px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#practicesPanel .practices-container .practice_item .inner .info .patients,
+#practicesPanel .practices-container .practice_item .inner .info .providers {
+  position: absolute;
+  height: auto;
+  width: 22%;
+  top: 20%;
+  right: 0;
+  text-align: right;
+  padding-right: 4%;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+#practicesPanel .practices-container .practice_item .inner .info .patients {
+  background-image: url(../img/patient_icon.png);
+  background-size: 45%;
+}
+#practicesPanel .practices-container .practice_item .inner .info .providers {
+  clear: both;
+  top: 42%;
+  background-size: 35%;
+  background-position: 10% 34%;
+  background-image: url(../img/medical_icon.png);
 }
 #practicesPanel .practices-container .practice_item .inner .bg_chart {
+  position: absolute;
   width: 105% !important;
   height: 105% !important;
   margin-left: -12px;
-  position: absolute;
   z-index: 0;
+}
+#practicesPanel .practices-container .practice_item .inner .scale {
+  position: absolute;
+  list-style-type: none;
+  width: 100%;
+  height: 6%;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  z-index: 2;
+}
+#practicesPanel .practices-container .practice_item .inner .scale li {
+  float: left;
+  display: inline-block;
+  width: 8.5%;
+  height: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+#practicesPanel .practices-container .practice_item .inner .scale li:not(:first-child) {
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-color: #848e8c;
+}
+#practicesPanel .practices-container .practice_item .inner .scale li:first-child,
+#practicesPanel .practices-container .practice_item .inner .scale li:last-child {
+  width: 7.5%;
 }
